@@ -7,19 +7,14 @@ import org.springframework.web.bind.annotation.RestController;
 
 @SpringBootApplication
 @RestController
-public class ProjectApplication {
+public class CompanyApplication {
 
 	public static void main(String[] args) {
-		SpringApplication.run(ProjectApplication.class, args);
+		SpringApplication.run(CompanyApplication.class, args);
 	}
 	
 	@GetMapping("/")
-	public String welcome(){
-		return "WELCOME TO PROJECT APPLICATION ";
-	}
-	
-	@GetMapping("/project")
-	public String project(){
-		return "WELCOME TO PROJECT APPLICATION ";
+	public String index(){
+		return "HELLO FROM COMPANY APPLICATION ";
 	}
 }
