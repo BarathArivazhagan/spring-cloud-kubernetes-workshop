@@ -26,7 +26,7 @@ public class BankDetailService{
 
 	public Bank getBankDetails(Long bankId) {
 		
-		String url = String.format("http://"+bankServiceName.concat("/bank?id=%d"),bankId);
+		String url = String.format(bankServiceName.concat("/bank?id=%d"),bankId);
 		System.out.println("URL ==> "+url);
 		return this.restTemplate.getForObject(url, Bank.class);
 	}
