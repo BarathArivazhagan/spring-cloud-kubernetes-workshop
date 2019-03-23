@@ -44,7 +44,7 @@ spec:
         - containerPort: 8082
         env:
         - name: bank.service.name
-          value: http://bank-microservice:8081 
+          value: http://bank-microservice:8081
 
  
 
@@ -57,12 +57,11 @@ metadata:
 spec:
   selector:
     app: bank-microservice
-  type: NodePort
+  type: ClusterIP
   ports:
   - protocol: TCP
     port: 8081
     targetPort: 8081
-    nodePort: 30782
 ---
 kind: Service
 apiVersion: v1
@@ -71,10 +70,9 @@ metadata:
 spec:
   selector:
     app: customer-microservice
-  type: NodePort
+  type: ClusterIP
   ports:
   - protocol: TCP
     port: 8082
     targetPort: 8082
-    nodePort: 32439
 
