@@ -7,7 +7,6 @@ spring:
     name: customer-microservice
 
 
-
 management:
   endpoints:
     web:
