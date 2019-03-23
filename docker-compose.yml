@@ -1,0 +1,11 @@
+version: '3.7'
+services:
+  bank-service:
+    build: ./bank-microservice
+    ports:
+      - "8081:8081"
+  customer-service:
+    build: ./customer-microservice
+    ports:
+      - "8082:8082"
+
