@@ -19,6 +19,7 @@ spec:
         image: barathece91/bank-microservice
         ports:
         - containerPort: 8081
+      
    
 ---
 # deployment config for customer service
@@ -41,6 +42,10 @@ spec:
         image: barathece91/customer-microservice
         ports:
         - containerPort: 8082
+        env:
+        - name: bank.service.name
+          value: http://bank-microservice:8081 
+
  
 
 

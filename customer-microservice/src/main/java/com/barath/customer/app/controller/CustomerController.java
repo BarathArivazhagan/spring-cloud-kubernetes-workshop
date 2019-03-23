@@ -3,12 +3,14 @@ package com.barath.customer.app.controller;
 import java.util.List;
 import java.util.Optional;
 
+import org.springframework.http.MediaType;
 import org.springframework.web.bind.annotation.*;
 
 import com.barath.customer.app.entity.Customer;
 import com.barath.customer.app.service.CustomerService;
 
 @RestController
+@RequestMapping(produces=MediaType.APPLICATION_JSON_UTF8_VALUE)
 public class CustomerController {
 	
 
@@ -33,7 +35,7 @@ public class CustomerController {
 	}
 	
 	
-	@RequestMapping(value="/customer")
+	@GetMapping(value="/customer")
 	public Optional<Customer> getCustomer(@RequestParam("id") long customerId){
 		
 		return customerService.getCustomer(customerId);
