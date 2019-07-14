@@ -1,11 +1,6 @@
 package com.barath.customer.app.service;
 
-import java.net.URI;
-import java.util.Objects;
-
 import org.springframework.beans.factory.annotation.Value;
-import org.springframework.cloud.client.ServiceInstance;
-import org.springframework.cloud.client.loadbalancer.LoadBalancerClient;
 import org.springframework.stereotype.Service;
 import org.springframework.web.client.RestTemplate;
 

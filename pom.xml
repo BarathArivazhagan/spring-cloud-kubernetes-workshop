@@ -8,7 +8,7 @@
 	<version>1.0.0.RELEASE</version>
 	<packaging>pom</packaging>
 
-	<name>spring-cloud-sidecar-polygot</name>
+	<name>spring-cloud-kubernetes-workshop</name>
 
 
 
